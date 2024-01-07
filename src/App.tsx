@@ -4,7 +4,7 @@ import './App.css'
 function App() {
     return (
         <>
-            <Goal title='Main Goal' description='Learn React + Typescript' />
+            <Goal title='Main Goal'>Learn React + Typescript</Goal>
         </>
     )
 }

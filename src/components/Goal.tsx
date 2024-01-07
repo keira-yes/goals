@@ -1,13 +1,12 @@
-interface GoalProps {
-    title: string
-    description: string
-}
+import { type FC, PropsWithChildren } from 'react'
 
-export const Goal = ({ title, description }: GoalProps) => {
+type GoalProps = PropsWithChildren<{ title: string }>
+
+export const Goal: FC<GoalProps> = ({ title, children }) => {
     return (
         <article>
             <h2>{title}</h2>
-            <p>{description}</p>
+            {children}
         </article>
     )
 }
