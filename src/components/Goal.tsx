@@ -1,4 +1,4 @@
-import { type FC, PropsWithChildren } from 'react'
+import { type FC, type PropsWithChildren } from 'react'
 
 type GoalProps = PropsWithChildren<{ title: string }>
 

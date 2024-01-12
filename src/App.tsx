@@ -1,5 +1,4 @@
 import { Goal } from './components/Goal'
-import './App.css'
 
 function App() {
     return (
