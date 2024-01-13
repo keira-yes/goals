@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Header } from './components/Header'
+import { NewGoal } from './components/NewGoal'
 import { Goals } from './components/Goals'
 
 export type GoalType = {
@@ -32,6 +33,7 @@ function App() {
             <button type='button' onClick={onAddGoal}>
                 Add new
             </button>
+            <NewGoal />
             <Goals goals={goals} onDeleteGoal={onDeleteGoal} />
         </>
     )
