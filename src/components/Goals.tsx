@@ -1,32 +1,15 @@
-import { useState, type FC } from 'react'
+import { type FC } from 'react'
 import { Goal } from './Goal'
+import { GoalType } from '../App'
 
-type Goal = {
-    id: number
-    title: string
-    description: string
+type GoalsProps = {
+    goals: GoalType[]
 }
 
-export const Goals: FC = () => {
-    const [goals, setGoals] = useState<Goal[]>([])
-
-    const addGoal = () => {
-        const newGoal: Goal = {
-            id: Math.random(),
-            title: 'Main Goal',
-            description: 'Learn React + Typescript'
-        }
-        setGoals((prevGoals) => {
-            return [...prevGoals, newGoal]
-        })
-    }
-
+export const Goals: FC<GoalsProps> = ({ goals }) => {
     return (
         <section>
             <h2>Goals</h2>
-            <button type='button' onClick={addGoal}>
-                Add new
-            </button>
             <ul>
                 {goals.map((goal) => (
                     <li key={goal.id}>
