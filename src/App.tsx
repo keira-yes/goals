@@ -11,7 +11,7 @@ export type GoalType = {
 function App() {
     const [goals, setGoals] = useState<GoalType[]>([])
 
-    const addGoal = () => {
+    const onAddGoal = () => {
         const newGoal: GoalType = {
             id: Math.random(),
             title: 'Main Goal',
@@ -22,13 +22,17 @@ function App() {
         })
     }
 
+    const onDeleteGoal = (id: number) => {
+        setGoals((prevGoals) => prevGoals.filter((goal) => goal.id !== id))
+    }
+
     return (
         <>
             <Header />
-            <button type='button' onClick={addGoal}>
+            <button type='button' onClick={onAddGoal}>
                 Add new
             </button>
-            <Goals goals={goals} />
+            <Goals goals={goals} onDeleteGoal={onDeleteGoal} />
         </>
     )
 }
