@@ -4,17 +4,17 @@ import { GoalType } from '../App'
 
 type GoalsProps = {
     goals: GoalType[]
-    onDeleteGoal: (id: number) => void
+    deleteGoalHandler: (id: number) => void
 }
 
-export const Goals: FC<GoalsProps> = ({ goals, onDeleteGoal }) => {
+export const Goals: FC<GoalsProps> = ({ goals, deleteGoalHandler }) => {
     return (
         <section>
             <h2>Goals</h2>
             <ul>
                 {goals.map((goal) => (
                     <li key={goal.id}>
-                        <Goal id={goal.id} title={goal.title} onDeleteGoal={onDeleteGoal}>
+                        <Goal id={goal.id} title={goal.title} deleteGoalHandler={deleteGoalHandler}>
                             {goal.description}
                         </Goal>
                     </li>
