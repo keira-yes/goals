@@ -213,11 +213,9 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		position: relative;
-		display: flex;
-		justify-self: center;
 		min-width: 320px;
-		min-height: 100vh;
 		margin: 0;
+		padding: 50px;
 		background-color: var(--white);
 		font-family: var(--font-primary);
 		font-size: 16px;
@@ -226,9 +224,16 @@ const GlobalStyle = createGlobalStyle`
 		overflow-x: hidden;
 	}
 
+	#root {
+		width: 100%;
+		max-width: 620px;
+		margin: 0 auto;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		margin-top: 0;
 		font-family: var(--font-secondary);
+		line-height: normal;
 	}
 
 	figure {
@@ -243,7 +248,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	p {
-		margin: 0 0 22px;
+		margin: 0 0 24px;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 
 	a {
