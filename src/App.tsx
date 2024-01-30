@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Header } from './components/Header'
 import { NewGoal } from './components/NewGoal'
 import { Goals } from './components/Goals'
+import GlobalStyle from './assets/css/GlobalStyle'
 
 export type GoalType = {
     id: number
@@ -29,6 +30,7 @@ function App() {
 
     return (
         <>
+            <GlobalStyle />
             <Header />
             <button type='button'>Add new</button>
             <NewGoal addGoal={addGoalHandler} />
