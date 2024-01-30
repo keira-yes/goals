@@ -10,12 +10,12 @@ type GoalsProps = {
 
 export const Goals: FC<GoalsProps> = ({ goals, deleteGoalHandler }) => {
     if (goals.length === 0) {
-        return <InfoBox type='info' />
+        return <InfoBox type='empty' />
     }
 
     return (
         <>
-            {goals.length > 4 && <InfoBox type='warning' />}
+            {goals.length > 2 && <InfoBox type='warning' />}
             <section>
                 <h2>Goals</h2>
                 <ul>

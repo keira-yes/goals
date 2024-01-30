@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { max } from '../../ui/Media'
 
 const GlobalStyle = createGlobalStyle`
 	/* FONTS */
@@ -194,6 +195,7 @@ const GlobalStyle = createGlobalStyle`
 	:root {
 		--white: #fff;
 		--light-grey: #F5F5F7;
+		--red: #F45B5B;
 		--black: #0C0B0B;
 
 		--font-primary: 'Roboto', sans-serif;
@@ -222,6 +224,10 @@ const GlobalStyle = createGlobalStyle`
 		line-height: 1.5;
 		color: var(--black);
 		overflow-x: hidden;
+
+		@media ${max.mobile} {
+			padding: 50px 20px;
+		}
 	}
 
 	#root {

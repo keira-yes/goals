@@ -1,19 +1,28 @@
 import { type FC } from 'react'
 import styled from 'styled-components'
 import Heading from '../ui/Heading'
+import { max } from '../ui/Media'
 import book from '../assets/img/book.svg'
 
 type InfoBoxProps = {
     type: 'warning' | 'empty'
 }
 
-const InfoBoxEmpty = styled.aside`
+const InfoBoxStyled = styled.aside`
+    margin: 24px 0;
+    padding: 30px;
+    border-radius: 14px;
+`
+
+const InfoBoxEmpty = styled(InfoBoxStyled)`
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 30px;
-    border-radius: 14px;
     background-color: var(--light-grey);
+
+    @media ${max.mobile} {
+        flex-direction: column;
+    }
 
     div {
         flex: 1;
@@ -24,13 +33,18 @@ const InfoBoxEmpty = styled.aside`
     }
 `
 
+const InfoBoxWarning = styled(InfoBoxStyled)`
+    background-color: var(--red);
+    color: var(--white);
+`
+
 export const InfoBox: FC<InfoBoxProps> = ({ type }) => {
     if (type === 'warning') {
         return (
-            <aside>
+            <InfoBoxWarning>
                 <Heading as='h2'>So many goals...</Heading>
                 <p>You have added a lot of goals. Are you sure you can achieve them all?</p>
-            </aside>
+            </InfoBoxWarning>
         )
     }
 
