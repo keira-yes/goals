@@ -32,7 +32,6 @@ function App() {
         <>
             <GlobalStyle />
             <Header />
-            <button type='button'>Add new</button>
             <NewGoal addGoal={addGoalHandler} />
             <Goals goals={goals} deleteGoalHandler={deleteGoalHandler} />
         </>

@@ -1,53 +1,10 @@
 import { useRef, type FC, type FormEvent } from 'react'
-import styled from 'styled-components'
+import { PrimaryButton } from '../ui/Button'
+import { Form, Input, Label } from '../ui/Form'
 
 type NewGoalProps = {
     addGoal: (title: string, description: string) => void
 }
-
-const Form = styled.form`
-    padding: 30px;
-    border-radius: 14px;
-    background-color: var(--light-grey);
-
-    Button {
-        width: 100%;
-        margin-top: 10px;
-    }
-`
-
-const Input = styled.input`
-    display: block;
-    width: 100%;
-    padding: 10px 15px;
-    border: 2px solid var(--black);
-    border-radius: 8px;
-    background-color: transparent;
-`
-
-const Label = styled.label`
-    display: block;
-    font-family: var(--font-secondary);
-`
-
-const Button = styled.button`
-    padding: 12px 35px;
-    border: 2px solid var(--black);
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 13px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-`
-
-const PrimaryButton = styled(Button)`
-    background-color: var(--black);
-    color: var(--white);
-
-    &:hover {
-        background-color: transparent;
-        color: var(--dark);
-    }
-`
 
 export const NewGoal: FC<NewGoalProps> = ({ addGoal }) => {
     const goalTitleRef = useRef<HTMLInputElement>(null)
