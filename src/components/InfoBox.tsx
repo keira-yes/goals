@@ -9,7 +9,6 @@ type InfoBoxProps = {
 }
 
 const InfoBoxStyled = styled.aside`
-    margin: 24px 0;
     padding: 30px;
     border-radius: 14px;
 `
