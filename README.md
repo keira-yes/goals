@@ -6,13 +6,13 @@
 
 Goals is a simple project that allows you to manage your goals.
 
-### Tech Stack
+### Technologies
 
 - React
 - TypeScript
 - Vite
-- HTML
 - Styled Components
+- HTML
 
 ### Installation
 
