@@ -8,9 +8,9 @@ Goals is a simple project built with React and TypeScript that allows you to man
 
 - React
 - TypeScript
-- Vite
 - Styled Components
 - HTML
+- Vite
 
 ### Installation
 
