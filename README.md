@@ -1,10 +1,8 @@
 # Goals
 
+Goals is a simple project built with React and TypeScript that allows you to manage your goals.
+
 ![Project Screenshot](https://github.com/keira-yes/goals/blob/main/src/assets/img/goals.png)
-
-### Description
-
-Goals is a simple project that allows you to manage your goals.
 
 ### Technologies
 
